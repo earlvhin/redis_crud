@@ -1,0 +1,24 @@
+<div class="d-flex" style="height: 90vh;">
+    <form class="form-inline" method="POST" action="/user/add" style="flex: 1;">
+        <div style="width: 100%">
+            <div class="mb-3">
+                <h3 class="mb-0">Add User</h3>
+                <small>Fill forms to add a new user.</small>
+            </div>
+            
+            {{#if error}} <div class="alert alert-dismissible alert-danger">{{error}}</div> {{/if}}
+
+            <input style="width: 100%;" type="text" class="form-control mb-3" name="id" placeholder="Enter a User ID">
+            
+            <input style="width: 100%;" type="text" class="form-control mb-3" name="first_name" placeholder="Enter a User Firstname">
+
+            <input style="width: 100%;" type="text" class="form-control mb-3" name="lastname" placeholder="Enter a User Lastname">
+
+            <input style="width: 100%;" type="text" class="form-control mb-3" name="email" placeholder="Enter a User Email">
+
+            <input style="width: 100%;" type="text" class="form-control mb-3" name="phone" placeholder="Enter a User Phone">
+            
+            <button class="btn btn-primary">Save User</button>
+        </div>
+    </form>
+</div>

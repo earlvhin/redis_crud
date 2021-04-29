@@ -1,0 +1,29 @@
+<div class="d-flex align-items-center" style="height: 90vh;">
+    <div style="flex: 1;">
+        <h1 class="mb-4">
+            {{user.first_name}}
+            {{user.lastname}} - 
+            [{{user.id}}]
+        </h1>
+
+        <ul class="m-0 p-0 mb-4">
+            <li class="list-group-item">
+                <strong>Email:</strong> {{ user.email}}
+            </li>
+            <li class="list-group-item">
+                <strong>Phone:</strong> {{ user.phone }}
+            </li>
+        </ul>
+
+        <div class="d-flex">
+            <div style="flex: 1;">
+                <a class="btn btn-secondary pull-left" href="/">Back</a>
+            </div>
+            <div class="flex: 1;">
+                <form method="POST" action="/user/delete/{{user.id}}?_method=DELETE">
+                    <input type="submit" class="btn btn-danger pull-right" value="Delete User">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

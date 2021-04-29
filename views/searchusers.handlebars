@@ -1,0 +1,15 @@
+<div class="d-flex" style="height: 90vh;">
+    <form class="form-inline" method="POST" action="/user/search" style="flex: 1;">
+        <div style="width: 100%">
+            <div class="mb-3">
+                <h3 class="mb-0">Search User</h3>
+                <small>Type in a user id to start</small>
+            </div>
+            
+            {{#if error}} <div class="alert alert-dismissible alert-danger">{{error}}</div> {{/if}}
+
+            <input style="width: 100%;" type="text" class="form-control mb-3" name="id" placeholder="Enter a User ID">
+            <button class="btn btn-primary">Search User</button>
+        </div>
+    </form>
+</div>
